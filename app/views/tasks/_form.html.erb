@@ -1,0 +1,13 @@
+<h1> <%= @task.title %></h1>
+
+<ul>
+<%= form_with model: @task do |t| %>
+  <li><%= t.label :title %>
+  <%= t.text_field :title %></li>
+  <li><%= t.label :details %>
+  <%= t.text_field :details %></li>
+  <%= t.label :completed %>
+  <%= t.check_box :completed %>
+  <%= t.submit %>
+<% end %>
+</ul>
